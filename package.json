@@ -1,0 +1,38 @@
+{
+  "name": "yxbj-mcp",
+  "type": "module",
+  "version": "1.0.1",
+  "main": "./build/index.js",
+  "bin": {
+    "yxbj-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node ./build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "keywords": [
+    "mcp",
+    "yinxiang",
+    "evernote",
+    "notes",
+    "ai",
+    "model-context-protocol"
+  ],
+  "author": "patrickwunier",
+  "license": "ISC",
+  "description": "印象笔记 MCP 服务器，支持通过 Model Context Protocol 保存笔记到印象笔记",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.25.42"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.27",
+    "typescript": "^5.8.3"
+  }
+}
